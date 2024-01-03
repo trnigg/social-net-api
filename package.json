@@ -1,0 +1,32 @@
+{
+  "name": "social-net-api",
+  "version": "1.0.0",
+  "description": "A NoSQL-based Backend for Social Network Sites",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "dev": "nodemon index",
+    "seed": "node utils/seed",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/trnigg/social-net-api.git"
+  },
+  "author": "trnigg",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/trnigg/social-net-api/issues"
+  },
+  "homepage": "https://github.com/trnigg/social-net-api#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^8.0.3"
+  },
+  "devDependencies": {
+    "eslint": "^7.12.1",
+    "eslint-config-prettier": "^6.15.0",
+    "nodemon": "^3.0.2",
+    "prettier": "^2.1.2"
+  }
+}
