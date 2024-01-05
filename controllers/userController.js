@@ -29,7 +29,9 @@ module.exports = {
         })
         .select('-__v');
       if (!user) {
-        return res.status(404).json({ message: 'No user with that ID' });
+        return res
+          .status(404)
+          .json({ message: 'No user was found with that ID' });
       }
       res.json(user);
     } catch (err) {
@@ -46,7 +48,9 @@ module.exports = {
         { new: true, runValidators: true }
       );
       if (!user) {
-        return res.status(404).json({ message: 'No user with that ID' });
+        return res
+          .status(404)
+          .json({ message: 'No user was found with that ID' });
       }
       res.json(user);
     } catch (err) {
@@ -60,10 +64,11 @@ module.exports = {
     try {
       const user = await User.findOneAndDelete({ _id: req.params.userId });
       if (!user) {
-        return res.status(404).json({ message: 'No user with that ID' });
+        return res
+          .status(404)
+          .json({ message: 'No user was found with that ID' });
       }
-
-      // BONUS: Remove a user's associated thoughts when deleted.
+      // Remove a user's associated thoughts when deleted - BONUS
       await Thought.deleteMany({ _id: { $in: user.thoughts } });
 
       res.json({ message: 'User and associated thoughts deleted.' });
@@ -82,10 +87,13 @@ module.exports = {
         { _id: req.params.userId },
         // $addToSet adds data to an array if it doesn't already exist
         { $addToSet: { friends: req.params.friendId } },
+        // Return updated doc and run validation on update
         { new: true, runValidators: true }
       );
       if (!user) {
-        return res.status(404).json({ message: 'No user with that ID' });
+        return res
+          .status(404)
+          .json({ message: 'No user was found with that ID' });
       }
       res.json(user);
     } catch (err) {
@@ -101,10 +109,13 @@ module.exports = {
         { _id: req.params.userId },
         // $pull removes instances of data from an array
         { $pull: { friends: req.params.friendId } },
+        // return updated doc
         { new: true }
       );
       if (!user) {
-        return res.status(404).json({ message: 'No user with that ID' });
+        return res
+          .status(404)
+          .json({ message: 'No user was found with that ID' });
       }
       res.json(user);
     } catch (err) {
