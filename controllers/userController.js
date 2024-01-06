@@ -39,6 +39,28 @@ module.exports = {
       return res.status(500).json(err);
     }
   },
+  // POST to create a new user
+  async createUser(req, res) {
+    try {
+      // Deconstruct req.body so we can check if username and email are provided
+      const { username, email } = req.body;
+
+      // Check if required fields are provided
+      if (!username || !email) {
+        return res
+          .status(400)
+          .json({ message: 'Please provide a username and email' });
+      }
+
+      const user = await User.create(req.body);
+      // return status 201 to indicate resource (user) was "created"
+      res.status(201).json(user);
+    } catch (err) {
+      console.log(err);
+      return res.status(500).json(err);
+    }
+  },
+
   // PUT to update a user by its _id
   async updateUser(req, res) {
     try {
@@ -95,7 +117,8 @@ module.exports = {
           .status(404)
           .json({ message: 'No user was found with that ID' });
       }
-      res.json(user);
+      // return status 201 to indicate resource (friend) was "created"
+      res.status(201).json(user);
     } catch (err) {
       console.log(err);
       return res.status(500).json(err);
