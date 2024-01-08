@@ -1,7 +1,7 @@
 // SCHEMA ONLY
 // IMPORT Types for additional schema types
 const { Schema, Types } = require('mongoose');
-const { formatTimestamp } = require('./helpers');
+const { formatTimestamp } = require('../utils/helpers');
 
 const reactionSchema = new Schema(
   {

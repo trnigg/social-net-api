@@ -2,7 +2,7 @@
 const { Schema, model } = require('mongoose');
 const reactionSchema = require('./Reaction');
 // UTIL for formatting date:
-const { formatTimestamp } = require('./helpers');
+const { formatTimestamp } = require('../utils/helpers');
 
 // SCHEMA to create a thought model
 const thoughtSchema = new Schema(
@@ -41,6 +41,6 @@ thoughtSchema
     return this.reactions.length;
   });
 
-const Thought = model('thought', thoughtSchema);
+const Thought = model('Thought', thoughtSchema);
 
 module.exports = Thought;
