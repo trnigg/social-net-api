@@ -1,4 +1,4 @@
-# social-net-api
+# Social Network API
 
 (`social-net-api` - Module 18 Challenge)
 
@@ -49,10 +49,9 @@ To install the application:
 
 ### Demo Video
 
-Click on the thumbnail below for a detailed demo of the back-end capabilities.  
-Please note, the demo includes the installation process. To skip this, and see only the routes being tested, go to 1:15 in the video.
+Click on the thumbnail below for a detailed demo of the back-end capabilities.
 
-[![A video thumbnail of a blank Visual Studio window with an overlayed play button.](./assets/screens.png)](https://drive.google.com/file/d/1u0BxVapz6avvzmo0uQduPBf01c7MI80O/view)
+[![A video thumbnail of a blank Visual Studio window with an overlayed play button.](./assets/screenshots/thumbnail.png)](https://drive.google.com/file/d/1R3z5FHTXpyX7eauu8RSHkIyqotQmMz8U/view)
 
 ## Tests
 
@@ -60,12 +59,12 @@ No tests have been written for this application.
 
 ## Roadmap / Known Bugs
 
-Curently, there are no known bugs or [issues](https://github.com/trnigg/social-net-api/issues).
+Currently, there are no known bugs or [issues](https://github.com/trnigg/social-net-api/issues).
 
 With more dev time in the future, there are a few additions required to the API/db-model before it can be used for something like a social-media site. These include:
 
 - Password fields for users and password hashing.
-- An improved system for adding friends bilaterelly, potentially uusing a "pending_friends" field or similiar.
+- An improved system for adding friends bilaterally, potentially using a "pending_friends" field or similar.
 - More validations and data-checks - for example, a user should ideally only be able to add a friends that the API/db recognises as a registered/valid user.
 
 ## License / Credits
