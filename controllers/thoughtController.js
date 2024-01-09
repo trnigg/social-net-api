@@ -117,13 +117,13 @@ module.exports = {
     }
   },
 
-  // DELETE to pull and remove a reaction by the reaction's reactionId value
+  // DELETE to pull and remove a reaction by the reaction's reactionId value from body
   async removeReaction(req, res) {
     // /api/thoughts/:thoughtId/reactions
     try {
       const thought = await Thought.findOneAndUpdate(
         { _id: req.params.thoughtId },
-        { $pull: { reactions: { reactionId: req.params.reactionId } } },
+        { $pull: { reactions: { reactionId: req.body.reactionId } } },
         // return updated document
         { new: true }
       );
