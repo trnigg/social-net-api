@@ -33,7 +33,7 @@ To install the application:
 
 1. Visit the [social-net-api](https://github.com/trnigg/social-net-api) repo on GitHub.
 2. Download and extract the `.zip` of the repository to your desired directory:  
-   ![Screenshot showing that clicking the CODE dropdown shows a link to download ZIP]()
+   ![Screenshot showing that clicking the CODE dropdown shows a link to download ZIP](./assets/screenshots/download_ZIP.png)
 3. Navigate to the directory using the console, or open it in an integrated terminal.
 4. Enter `npm i` or `npm install` in your console or integrated terminal to retrieve and install the required dependencies and automatically create a folder to store these (`./node_modules`).
 
