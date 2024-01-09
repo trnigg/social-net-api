@@ -2,3 +2,6 @@ coverage/
 node_modules/
 .env
 .DS_Store
+.eslintignore
+.eslintrc.json
+.prettierrc.json

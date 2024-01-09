@@ -20,11 +20,11 @@ const reactionSchema = new Schema(
       required: true,
     },
     createdAt: {
-      type: Date, // TODO: Contemplate using a helper or util/library
+      type: Date,
       default: Date.now,
       // Getter method to format timestamp on query
       // https://mongoosejs.com/docs/tutorials/getters-setters.html
-      get: formatTimestamp, // TODO: confirm this work?
+      get: formatTimestamp,
     },
   },
   {
